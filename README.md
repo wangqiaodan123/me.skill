@@ -29,9 +29,9 @@ git clone https://github.com/wangqiaodan123/me.skill ~/.claude/skills/create-me
 
 ## 需要什么材料？
 
-材料越多，你的数字分身越像你。不过所有材料都是可选的——仅凭你口述的信息也能生成。
+材料越多越好，生成的你越像。—凭你口述的信息也能生成。
 
-**聊天记录**是信息密度最高的来源。微信和 QQ 导出的 txt / html / json 格式都支持，推荐用 [WeChatMsg](https://github.com/xaoyaoo/WeChatMsg)、留痕、PyWxDump 等工具导出。也可以直接在聊天窗口里手动选中消息复制粘贴。
+**聊天记录**是信息密度最高的来源。微信和 QQ 导出的 txt / html / json 格式都支持，推荐用 CipherTalk工具导出。也可以直接在聊天窗口里手动选中消息复制粘贴。
 
 **社交媒体截图**（朋友圈、微博、小红书）可以提取你的公开人设和分享偏好。Claude Code 原生支持图片读取，直接上传截图即可。
 
@@ -41,29 +41,7 @@ git clone https://github.com/wangqiaodan123/me.skill ~/.claude/skills/create-me
 
 可以混用以上所有方式。
 
----
 
-## 它怎么工作的？
-
-生成的数字分身由两个模块协同驱动：
-
-```
-别人发消息
-    ↓
-[Part B] Persona 判断：你会怎么回应？什么态度？什么语气？
-    ↓
-[Part A] Life Memory 补充：结合你的人生经历，让回应更真实
-    ↓
-输出：用你的方式说话
-```
-
-**Part A — Life Memory** 存储事实性内容：人生时间线、重要经历、去过的地方、兴趣爱好、饮食偏好、价值观、人际互动模式。
-
-**Part B — Persona** 是一个 5 层行为模型：硬规则（不说你绝不会说的话）→ 身份锚定 → 说话风格 → 情感模式 → 人际行为。
-
-两个模块可以独立使用：`/{slug}-memory` 只聊经历，`/{slug}-persona` 只看风格。
-
----
 
 ## 能识别哪些性格特征？
 
@@ -202,5 +180,3 @@ Feed your chat logs, social media posts, and photos to AI. Get back a digital tw
 </details>
 
 ---
-
-MIT License
